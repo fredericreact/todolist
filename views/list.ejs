@@ -14,10 +14,15 @@
 </form>
 
 <ul>
-  <li>Buy Food</li>
-  <li>cook food</li>
-  <li>eat food</li>
-  <li><%= newListItem %></li>
+  
+
+
+<% for (var i= 0; i< newListItem.length ;i++) { %>
+<li> <%= newListItem[i] %> </li>
+<% }; %>
+
+
+
 </ul>
 
   </body>
