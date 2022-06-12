@@ -8,6 +8,17 @@
 
 <h1> <%= kindOfDay%> </h1>
 
+<form action="/" method="post">
+  <input type="text" name="newItem" >
+  <button type="submit">Add</button>
+</form>
+
+<ul>
+  <li>Buy Food</li>
+  <li>cook food</li>
+  <li>eat food</li>
+  <li><%= newListItem %></li>
+</ul>
 
   </body>
 </html>
