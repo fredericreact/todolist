@@ -6,8 +6,12 @@ const date = require(__dirname +"/date.js");
 
 const app = express();
 
-let items = ["buy food", "cook food", "eat food"];
-let workItems =[];
+const items = ["buy food", "cook food", "eat food"];
+const workItems =[];
+
+// Possible de push items into arrays pour les array declarees en const
+// en gros, en javascript, const , tu peu changer ce qu'il y a des les objets ou array
+// mais tu peux pas assigner un completely new array ou object
 
 app.set('view engine', 'ejs');
 
@@ -16,7 +20,7 @@ app.use(express.static("public"));
 
 app.get("/", function(req, res) {
 
-let day = date.getDay();
+const day = date.getDate();
 
 
 
@@ -30,7 +34,7 @@ let day = date.getDay();
 app.post("/",function(req,res) {
 
 
-  let item = req.body.newItem;
+  const item = req.body.newItem;
 
 if(req.body.list === "Work") {
   workItems.push(item);
